@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -30,11 +30,11 @@
       <div class="profile-card">
         <div class="profile-image">
           <!-- TODO: 프로필 이미지를 넣어주세요 -->
-          <!-- <img src="./images/profile.jpg" alt="프로필 사진" /> -->
+          <img src="./images/image10.png" alt="프로필 사진" />
         </div>
         <div class="profile-info">
-          <h1>닉네임</h1>
-          <p class="tagline">한 줄 소개를 작성해주세요.</p>
+          <h1>해니</h1>
+          <p class="tagline">우테코 프론트엔드 8기</p>
         </div>
       </div>
     </section>
@@ -43,7 +43,7 @@
       <!-- 자기소개 -->
       <section class="content-section">
         <h2>자기소개</h2>
-        <p>자기소개를 작성해주세요.</p>
+        <p>우테코 프론트엔드 8기입니다. 앞으로가 기대돼요 ~~~~~ 파이팅 ㅎㅎ</p>
         <!-- TODO: 소개 글 안에 블로그, GitHub 등 관련 링크를 <a> 태그로 연결하세요 -->
       </section>
 
@@ -54,19 +54,19 @@
         <table class="info-table">
           <tr>
             <th>이름</th>
-            <td></td>
+            <td>장혜원</td>
           </tr>
           <tr>
             <th>MBTI</th>
-            <td></td>
+            <td>INFJ</td>
           </tr>
           <tr>
             <th>취미</th>
-            <td></td>
+            <td>뜨개질, 자기, 드라마 정주행하기</td>
           </tr>
           <tr>
             <th>좋아하는 음식</th>
-            <td></td>
+            <td>떡볶이, 마라탕, 빵</td>
           </tr>
         </table>
       </section>
@@ -74,7 +74,9 @@
       <!-- 나만의 갤러리 -->
       <section class="content-section" id="gallery">
         <h2>나만의 갤러리</h2>
-        <p class="section-desc">갤러리 부제를 작성해주세요. (예: 기억에 남는 여행지)</p>
+        <p class="section-desc">
+          갤러리 부제를 작성해주세요. (예: 기억에 남는 여행지)
+        </p>
         <div class="gallery-grid">
           <!-- TODO: 9장의 이미지를 배치하세요 -->
           <!--
@@ -82,6 +84,15 @@
           <img src="./images/gallery-2.jpg" alt="갤러리 이미지 2" />
           ...
           -->
+          <img src="./images/image.png" alt="좋아하는 캐릭터" />
+          <img src="./images/image1.png" alt="좋아하는 캐릭터" />
+          <img src="./images/image2.png" alt="좋아하는 캐릭터" />
+          <img src="./images/image3.png" alt="좋아하는 캐릭터" />
+          <img src="./images/image4.png" alt="좋아하는 캐릭터" />
+          <img src="./images/image5.png" alt="좋아하는 캐릭터" />
+          <img src="./images/image6.png" alt="좋아하는 캐릭터" />
+          <img src="./images/image7.png" alt="좋아하는 캐릭터" />
+          <img src="./images/image8.png" alt="좋아하는 캐릭터" />
         </div>
       </section>
 
@@ -93,11 +104,11 @@
           <!-- TODO: 작품 중 하나는 <video> 또는 <iframe>으로 영상을 삽입하세요 -->
           <article class="work-card">
             <div class="work-thumbnail">
-              <!-- 작품 이미지 -->
+              <img src="./images/image9.png" alt="좋아하는 캐릭터" />
             </div>
             <div class="work-info">
-              <h3>작품 제목</h3>
-              <p>작품에 대한 설명을 작성해주세요.</p>
+              <h3>도시남녀 사랑법</h3>
+              <p>강릉에서 만나서 사랑함</p>
             </div>
           </article>
         </div>
@@ -116,11 +127,22 @@
           </div>
           <div class="form-group">
             <label for="til-title">제목</label>
-            <input type="text" id="til-title" name="title" placeholder="학습 주제를 입력하세요" required />
+            <input
+              type="text"
+              id="til-title"
+              name="title"
+              placeholder="학습 주제를 입력하세요"
+              required
+            />
           </div>
           <div class="form-group">
             <label for="til-content">내용</label>
-            <textarea id="til-content" name="content" placeholder="오늘 배운 내용을 정리해주세요" required></textarea>
+            <textarea
+              id="til-content"
+              name="content"
+              placeholder="오늘 배운 내용을 정리해주세요"
+              required
+            ></textarea>
           </div>
           <div class="form-actions">
             <button type="submit">등록</button>
@@ -134,11 +156,18 @@
           <article class="til-item">
             <time>2026-03-15</time>
             <h3>HTML 시멘틱 태그</h3>
-            <p>header, nav, main, section, article, footer 등 시멘틱 태그의 역할과 사용법을 배웠다.</p>
+            <p>
+              header, nav, main, section, article, footer 등 시멘틱 태그의
+              역할과 사용법을 배웠다.
+            </p>
+          </article>
+          <article class="til-item">
+            <time>2026-03-15</time>
+            <h3>실행 컨텍스트</h3>
+            <p>자바스크립트에서 코드가 어떻게 동작하는지 배웠다.</p>
           </article>
         </div>
       </section>
-
     </main>
 
     <footer>
