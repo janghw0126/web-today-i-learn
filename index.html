@@ -2,117 +2,132 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- TODO: Open Graph 메타 태그를 설정하세요 -->
-    <!-- <meta property="og:title" content="페이지 제목" /> -->
-    <!-- <meta property="og:description" content="페이지 설명" /> -->
-    <!-- <meta property="og:image" content="./images/thumbnail.jpg" /> -->
+    <title>Henny's Dev Blog</title>
 
-    <title>Today I Learn</title>
+    <!-- Modern Typography -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/index.js" defer></script>
   </head>
   <body>
-    <!-- 상단 내비게이션 -->
+    <!-- Navigation -->
     <nav class="top-nav">
-      <span class="nav-logo">My Page</span>
+      <span class="nav-logo">Henny.log</span>
       <ul class="nav-links">
-        <li><a href="#about">자기소개</a></li>
+        <li><a href="#info">자기소개</a></li>
         <li><a href="#gallery">갤러리</a></li>
         <li><a href="#works">인생 작품</a></li>
-        <li><a href="#til">TIL</a></li>
+        <li><a href="#til">Today I Learned</a></li>
       </ul>
     </nav>
 
-    <!-- 프로필 히어로 -->
-    <section class="hero" id="about">
+    <!-- Profile Hero -->
+    <header class="hero" id="about">
       <div class="profile-card">
         <div class="profile-image">
-          <!-- TODO: 프로필 이미지를 넣어주세요 -->
-          <img src="./images/image10.png" alt="프로필 사진" />
+          <img
+            src="https://avatars.githubusercontent.com/u/127714800?s=400&u=a02b1e1acff318f59bdca7fe7db931529f2603e4&v=4"
+            alt="Haeny Profile"
+          />
         </div>
         <div class="profile-info">
           <h1>해니</h1>
-          <p class="tagline">우테코 프론트엔드 8기</p>
+          <p class="tagline">우테코 프론트엔드 8기입니다. 아자잣 화이팅!!</p>
+          <div style="margin-top: 16px; display: flex; gap: 8px">
+            <a
+              href="https://github.com/janghw0126"
+              target="_blank"
+              class="btn btn-secondary"
+              >GitHub</a
+            >
+            <a
+              href="https://janghw0126.tistory.com/"
+              target="_blank"
+              class="btn btn-secondary"
+              >Blog</a
+            >
+          </div>
         </div>
       </div>
-    </section>
+    </header>
 
     <main>
-      <!-- 자기소개 -->
-      <section class="content-section">
-        <h2>자기소개</h2>
-        <p>
-          우테코 8기 프론트엔드 해니라고 합니다. 만나서 반가워용. 같이 성장해
-          나가요. 화이팅!!!
-        </p>
-        <a href="https://github.com/janghw0126">GitHub</a>
-        <a href="https://janghw0126.tistory.com/">블로그</a>
-        <!-- TODO: 소개 글 안에 블로그, GitHub 등 관련 링크를 <a> 태그로 연결하세요 -->
-      </section>
-
-      <!-- 기본 정보 -->
+      <!-- Basic Info -->
       <section class="content-section" id="info">
-        <h2>기본 정보</h2>
-        <!-- TODO: 자신의 기본 정보를 표(<table>)로 정리하세요 -->
-        <table class="info-table">
-          <tr>
-            <th>이름</th>
-            <td>장혜원</td>
-          </tr>
-          <tr>
-            <th>MBTI</th>
-            <td>INFJ</td>
-          </tr>
-          <tr>
-            <th>취미</th>
-            <td>뜨개질, 잠자기, 드라마 정주행!!❤️, 팟캐스트 듣기</td>
-          </tr>
-          <tr>
-            <th>좋아하는 음식</th>
-            <td>
-              떡볶이, 소금빵빵빵빵빵 너무 좋아해요, 면이라면 다
-              좋아합니댜..(킬러예요), 한식이라면 다..좋아해요
-            </td>
-          </tr>
-        </table>
-      </section>
-
-      <!-- 나만의 갤러리 -->
-      <section class="content-section" id="gallery">
-        <h2>나만의 갤러리</h2>
-        <p class="section-desc">
-          갤러리 부제를 작성해주세요. (예: 기억에 남는 여행지)
-        </p>
-        <div class="gallery-grid">
-          <!-- TODO: 9장의 이미지를 배치하세요 -->
-          <!--
-          <img src="./images/gallery-1.jpg" alt="갤러리 이미지 1" />
-          <img src="./images/gallery-2.jpg" alt="갤러리 이미지 2" />
-          ...
-          -->
-          <img src="./images/image.png" alt="좋아하는 캐릭터" />
-          <img src="./images/image1.png" alt="좋아하는 캐릭터" />
-          <img src="./images/image2.png" alt="좋아하는 캐릭터" />
-          <img src="./images/image3.png" alt="좋아하는 캐릭터" />
-          <img src="./images/image4.png" alt="좋아하는 캐릭터" />
-          <img src="./images/image5.png" alt="좋아하는 캐릭터" />
-          <img src="./images/image6.png" alt="좋아하는 캐릭터" />
-          <img src="./images/image7.png" alt="좋아하는 캐릭터" />
-          <img src="./images/image8.png" alt="좋아하는 캐릭터" />
+        <h2>자기소개</h2>
+        <div class="card-container">
+          <table class="info-table">
+            <tr>
+              <th>Name</th>
+              <td>장혜원</td>
+            </tr>
+            <tr>
+              <th>MBTI</th>
+              <td>INFJ</td>
+            </tr>
+            <tr>
+              <th>Hobbies</th>
+              <td>뜨개질, 잠자기, 드라마 정주행 사랑합니다, 팟캐스트 듣기</td>
+            </tr>
+            <tr>
+              <th>Favorites</th>
+              <td>
+                떡볶이, 소금빵 킬러..빵이라면 다 킬러입니다, 면 킬러입니다, 한식
+                킬러입니다
+              </td>
+            </tr>
+          </table>
         </div>
       </section>
 
-      <!-- 나를 울린 인생 작품 -->
+      <!-- Gallery -->
+      <section class="content-section" id="gallery">
+        <h2>갤러리</h2>
+        <p class="section-desc">
+          일상의 작은 기록들과 좋아하는 순간들을 모았습니다.
+        </p>
+        <div class="gallery-grid">
+          <img src="./images/image.png" alt="Favorite 1" />
+          <img src="./images/image1.png" alt="Favorite 2" />
+          <img src="./images/image2.png" alt="Favorite 3" />
+          <img src="./images/image3.png" alt="Favorite 4" />
+          <img src="./images/image4.png" alt="Favorite 5" />
+          <img src="./images/image5.png" alt="Favorite 6" />
+          <img src="./images/image6.png" alt="Favorite 7" />
+          <img src="./images/image7.png" alt="Favorite 8" />
+          <img src="./images/image8.png" alt="Favorite 9" />
+        </div>
+      </section>
+
+      <!-- Life Works -->
       <section class="content-section" id="works">
         <h2>나를 울린 인생 작품</h2>
-        <div class="works-list">
-          <!-- TODO: 최소 2가지 작품을 소개하세요 -->
-          <!-- TODO: 작품 중 하나는 <video> 또는 <iframe>으로 영상을 삽입하세요 -->
+        <div class="card-grid">
           <article class="work-card">
             <div class="work-thumbnail">
-              <img src="./images/image9.png" alt="좋아하는 캐릭터" />
+              <iframe
+                src="https://www.youtube.com/embed/nNKJRttaYrc"
+                title="도시남녀 사랑법 영상"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
             </div>
             <div class="work-info">
               <h3>도시남녀 사랑법</h3>
@@ -140,19 +155,19 @@
         </div>
       </section>
 
-      <!-- TIL (Today I Learned) -->
+      <!-- TIL -->
       <section class="content-section" id="til">
-        <h2>TIL</h2>
+        <h2>Today I Learned</h2>
         <p class="section-desc">오늘 새롭게 배운 것들을 기록합니다.</p>
 
-        <!-- TIL 작성 폼 -->
+        <!-- TIL Registration Form -->
         <form class="til-form" id="til-form">
           <div class="form-group">
-            <label for="til-date">날짜</label>
+            <label for="til-date">Date</label>
             <input type="date" id="til-date" name="date" required />
           </div>
           <div class="form-group">
-            <label for="til-title">제목</label>
+            <label for="til-title">Topic</label>
             <input
               type="text"
               id="til-title"
@@ -162,42 +177,44 @@
             />
           </div>
           <div class="form-group">
-            <label for="til-content">내용</label>
+            <label for="til-content">Content</label>
             <textarea
               id="til-content"
               name="content"
-              placeholder="오늘 배운 내용을 정리해주세요"
+              placeholder="오늘 배운 내용을 간단히 정리해주세요"
               required
             ></textarea>
           </div>
           <div class="form-actions">
-            <button type="submit">등록</button>
-            <button type="reset">초기화</button>
+            <button type="submit" class="btn btn-primary">등록하기</button>
+            <button type="reset" class="btn btn-secondary">초기화</button>
           </div>
         </form>
 
-        <!-- TIL 목록: 폼으로 등록하면 여기에 항목이 추가됩니다 -->
+        <!-- TIL List -->
         <div class="til-list" id="til-list">
-          <!-- 아래는 예시 항목입니다. 자유롭게 수정하거나 삭제하세요 -->
           <article class="til-item">
             <time>2026-03-15</time>
             <h3>HTML 시멘틱 태그</h3>
             <p>
               header, nav, main, section, article, footer 등 시멘틱 태그의
-              역할과 사용법을 배웠다.
+              역할과 사용법을 배웠다. 웹 접근성과 SEO 향상에 큰 도움이 된다.
             </p>
           </article>
           <article class="til-item">
             <time>2026-03-15</time>
-            <h3>실행 컨텍스트</h3>
-            <p>자바스크립트에서 코드가 어떻게 동작하는지 배웠다.</p>
+            <h3>실행 컨텍스트 (Execution Context)</h3>
+            <p>
+              자바스크립트 엔진이 코드를 실행하기 위해 필요한 환경 정보를
+              모아놓은 객체의 생성 과정을 깊이 있게 학습했다.
+            </p>
           </article>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; My Page</p>
+      <p>&copy; 2026 Henny. All rights reserved.</p>
     </footer>
   </body>
 </html>

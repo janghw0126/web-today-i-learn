@@ -1,16 +1,62 @@
-@import url("https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+
+:root {
+  /* GitHub Primer Inspired Colors */
+  --color-canvas-default: #ffffff;
+  --color-canvas-subtle: #f6f8fa;
+  --color-border-default: #d0d7de;
+  --color-border-muted: hsla(210, 18%, 87%, 1);
+  --color-fg-default: #1f2328;
+  --color-fg-muted: #656d76;
+  --color-accent-fg: #0969da;
+  --color-neutral-muted: rgba(175, 184, 193, 0.2);
+  --color-btn-bg: #f6f8fa;
+  --color-btn-hover-bg: #f3f4f6;
+  --color-btn-active-bg: #ebecf0;
+
+  --primary-color: var(--color-accent-fg);
+  --nav-bg-color: var(--color-canvas-default);
+  --hero-bg-color: var(--color-canvas-subtle);
+  --card-bg-color: var(--color-canvas-default);
+  --divider-color: var(--color-border-muted);
+  --font-default-color: var(--color-fg-default);
+
+  /* Fonts: Cute Headings, Basic Body */
+  --font-family-base: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-heading: "Jua", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
 
 body {
-  font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: var(--font-family-base);
   font-size: 16px;
+  line-height: 1.6;
   color: var(--font-default-color);
+  background-color: var(--color-canvas-default);
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
 h2,
-h3 {
-  font-family: "Jua", serif;
+h3,
+h4 {
+  font-family: var(--font-family-heading);
   font-weight: 400;
+  color: var(--color-fg-default);
+  margin-top: 0;
+}
+
+a {
+  color: var(--color-accent-fg);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
