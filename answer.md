@@ -71,7 +71,7 @@ ADD CONSTRAINT uq_crew_nickname
 
 ---
 
-## DML(CRUD) 실습
+## DML 실습
 
 ### 문제 5: 크루 닉네임 검색하기 (LIKE)
 
