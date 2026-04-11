@@ -4,14 +4,18 @@
 
 ### 문제 1: 테이블 생성하기 (CREATE TABLE)
 
-**생각해보기 - 중복된 데이터는 어떤 컬럼인가?**
-`crew_id`와 `nickname` 컬럼이다. 같은 크루가 출석할 때마다 동일한 `crew_id`와 `nickname` 쌍이 반복해서 삽입된다. 예를 들어 검프(crew_id=1)가 7일 출석하면 `(1, '검프')` 쌍이 7번 중복 저장된다.
+1. attendance 테이블은 중복된 데이터가 쌓이는 구조이다. 중복된 데이터는 어떤 컬럼인가?
 
-**생각해보기 - crew 테이블은 어떻게 구성할 수 있을까?**
+`crew_id`와 `nickname` 컬럼이다. 같은 크루가 출석할 때마다 동일한 `crew_id`와 `nickname` 쌍이 반복해서 삽입된다. 예를 들어, 검프(crew_id=1)가 7일 출석하면 `(1, '검프')` 쌍이 7번 중복 저장된다.
+
+2. attendance 테이블에서 중복을 제거하기 위해 crew 테이블을 만들려고 한다. 어떻게 구성해 볼 수 있을까?
+
 크루의 고유 식별자인 `crew_id`(PK)와 `nickname` 두 컬럼으로 구성한다.
 
+3. crew 테이블에 들어가야 할 크루들의 정보는 어떻게 추출할까? (hint: DISTINCT)
+
 ```sql
--- 1. 크루 정보 추출 (DISTINCT로 중복 제거)
+-- 1. 크루 정보 추출
 SELECT DISTINCT crew_id, nickname
 FROM attendance
 ORDER BY crew_id;
@@ -34,8 +38,11 @@ ORDER BY crew_id;
 
 ### 문제 2: 테이블 컬럼 삭제하기 (ALTER TABLE)
 
-**생각해보기 - 불필요해지는 컬럼은?**
+1. crew 테이블을 만들고 중복을 제거했다. attendance에서 불필요해지는 컬럼은?
+
 `nickname` 컬럼이다. 크루 정보는 crew 테이블에서 `crew_id`를 통해 조회할 수 있으므로 attendance 테이블에서 nickname을 별도로 저장할 필요가 없다.
+
+2. 컬럼을 삭제하려면 어떻게 해야 하는가?
 
 ```sql
 ALTER TABLE attendance
@@ -46,7 +53,8 @@ DROP COLUMN nickname;
 
 ### 문제 3: 외래키 설정하기
 
-**생각해보기 - 잠재적인 문제는?**
+- 만약에 crew 테이블에는 crew_id가 12번인 크루가 존재하지 않지만, attendance 테이블에는 여전히 crew_id가 12번인 크루가 존재한다면?
+
 attendance 테이블에 crew 테이블에 존재하지 않는 `crew_id`가 들어올 수 있다. 외래키(FK) 제약을 걸면 crew 테이블에 없는 `crew_id`는 attendance에 삽입되지 않고, crew에서 레코드가 삭제될 때도 참조 무결성이 보호된다.
 
 ```sql
@@ -60,7 +68,9 @@ ADD CONSTRAINT fk_attendance_crew
 
 ### 문제 4: 유니크 키 설정
 
-**생각해보기 - crew 테이블의 결함은?**
+- 우아한테크코스에서는 닉네임의 '중복'이 엄연히 금지된다. 그런데 현재 테이블에는 중복된 닉네임이 담길 수 있다. crew 테이블의 결함을 어떻게 해결할 수 있을까?
+
+
 현재 crew 테이블에는 동일한 nickname이 여러 번 삽입될 수 있다. 우아한테크코스에서 닉네임 중복이 금지되므로, UNIQUE 제약으로 DB 레벨에서도 중복을 방지해야 한다.
 
 ```sql
@@ -78,7 +88,7 @@ ADD CONSTRAINT uq_crew_nickname
 3월 4일에 등교한 크루 중 닉네임 첫 글자가 '디'인 크루를 찾는다.
 
 ```sql
--- crew 테이블 분리 전 (nickname 컬럼이 attendance에 있는 경우)
+-- crew 테이블 분리 전
 SELECT *
 FROM attendance
 WHERE attendance_date = '2025-03-04'
@@ -136,7 +146,7 @@ VALUES (13, '2025-03-06', '09:31', '18:01');
 
 ### 문제 8: 잘못된 출석 기록 수정 (UPDATE)
 
-주니의 3월 12일 start_time을 10:05 → 10:00으로 수정한다.
+주니의 3월 12일 start_time을 10:05 -> 10:00으로 수정한다.
 
 ```sql
 UPDATE attendance
